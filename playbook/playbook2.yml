@@ -1,0 +1,9 @@
+-
+  name: this is our first play.
+  hosts: webserver0
+  tasks: 
+    - 
+      name: "create a dammy file on webserver"
+      command: mkdir /tmp/ansible_dummy_dir
+
+

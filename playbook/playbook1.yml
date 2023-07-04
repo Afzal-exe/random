@@ -1,0 +1,9 @@
+-
+  name: this is our first play.
+  hosts: web_database_servers
+  tasks: 
+    - 
+      name: "create a dammy file on webserver"
+      command: touch /tmp/ansible_dummy1.txt
+
+

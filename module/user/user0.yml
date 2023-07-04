@@ -1,0 +1,18 @@
+-
+  name: "creating a user in target machine"
+  hosts: sqlserver0
+  tasks:
+    -
+      name: "creating.... [if not present]"
+      user: 
+        name: "mytestuser"
+        state: present
+        password: "1234"
+      become: true
+
+# Here to add/create a new user you require SUDO previleges
+# so you have to add "become: true" in the file to get it  
+# USE BELOW CAMMAND WHILE EXECTUING THIS FILE 
+# ansible-playbook module/service/service1.yml -i inventory.txt -u afzal --ask-pass -K
+
+

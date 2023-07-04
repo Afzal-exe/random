@@ -1,0 +1,13 @@
+-
+  name: "playbook using variables"
+  hosts: webserver0
+  vars: 
+    servicename: "apache2"
+    req_state: "stopped"
+  tasks: 
+    -
+      name: "{{ req_state }} the apache2 server"
+      service:
+        name: "{{ servicename }}"
+        state: "{{ req_state }}"
+  become: true

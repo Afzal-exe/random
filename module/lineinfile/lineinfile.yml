@@ -1,0 +1,9 @@
+-
+  name: "This is our first play"
+  hosts: webserver0
+  tasks:
+    - 
+      name: "copy a file from controller to webserver0"
+      lineinfile: 
+        path: /tmp/test1.txt
+        line: "afzal"

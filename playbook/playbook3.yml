@@ -1,0 +1,7 @@
+-
+  name: this is our first play.
+  hosts: webserver0
+  tasks:
+    -
+      name: "deleting a file on webserver"
+      command: rm /tmt/ansible_dummy1.txt

@@ -1,0 +1,12 @@
+-
+  name: "This is our first play"
+  hosts: webserver0
+  tasks:
+    - 
+      name: "copy a file from controller to webserver0"
+      ansible.builtin.copy:
+        src: /etc/ansible/test1.yml
+        dest: /tmp/
+        owner: "afzal"
+        group: "afzal"
+        mode: '0777'

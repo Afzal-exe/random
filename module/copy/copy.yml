@@ -1,0 +1,9 @@
+-
+  name: "This is our first play"
+  hosts: webserver0
+  tasks: 
+    - 
+      name: "copy a file from controller to webserver0"
+      ansible.builtin.copy: 
+        src: /etc/ansible/test.yml 
+        dest: /tmp/

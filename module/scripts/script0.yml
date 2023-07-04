@@ -1,0 +1,8 @@
+- 
+  name: "testing script module"
+  hosts: webserver0
+  tasks:
+    -
+      name:  "running the test script"
+      script: testscript.sh afzal
+
