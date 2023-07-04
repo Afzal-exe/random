@@ -637,3 +637,717 @@
   348  git push origin main
   349  git push -f origin main
   350  history >> allcommands.txt 
+    1  apt update
+    2  apt update -y
+    3  systemctl status apache2
+    4  systemctl start apache2
+    5  systemctl start httpd
+    6  apt upgrade
+    7  systemctl start apache2
+    8  systemctl start httpd
+    9  systemctl status apache2
+   10  systemctl start apache2
+   11  service apache2 start
+   12  apt update
+   13  service ssh start
+   14  apt install apache2
+   15  apt install ssh
+   16  systemctl status apache2
+   17  init 0
+   18  systemctl status apache2
+   19  init 0
+   20  apt install ansible
+   21  usermod -aG sudo afzal
+   22  ansible --version
+   23  init 0
+   24  ansible webserver -m ping -i inventory.txt 
+   25  cat inventory.txt 
+   26  vim inventory.txt 
+   27  ansible webserver -m ping -i inventory.txt 
+   28  vim inventory.txt 
+   29  ansible webserver -m ping -i inventory.txt 
+   30  vim inventory.txt 
+   31  ansible webserver -m ping -i inventory.txt 
+   32  vim inventory.txt 
+   33  ansible webserver2 -m ping -i inventory.txt 
+   34  ansible -m ping -i inventory.txt 
+   35  ansible all -m ping -i inventory.txt 
+   36  ansible webserver* -m ping -i inventory.txt 
+   37  vim inventory.txt 
+   38  ansible server -m ping -i inventory.txt 
+   39  vim inventory.txt 
+   40  ansible servers -m ping -i inventory.txt 
+   41  ping 10.0.2.5
+   42  ping 10.0.2.6
+   43  vim inventory.txt 
+   44  ansible servers -m ping -i inventory.txt 
+   45  ls
+   46  vim inventory.txt 
+   47  ansible web_database_servers -m ping -i inventory.txt 
+   48  vim inventory.txt 
+   49  ansible web_database_servers -m ping -i inventory.txt
+   50  vim inventory.txt 
+   51  ansible web_database_server -m ping -i inventory.txt
+   52  mkdir playbook
+   53  cd playbook/
+   54  vim playbook.yml
+   55  cat playbook.yml 
+   56  pwd
+   57  ansible-playbook playbook.yml -i inventory.txt
+   58  cat playbook.yml 
+   59  ansible-playbook playbook.yml -i inventory.txt
+   60  vim inventory.txt 
+   61  cd ..
+   62  vim inventory.txt 
+   63  ansible-playbook playbook.yml -i inventory.txt
+   64  ansible-playbook playbook/playbook.yml -i inventory.txt
+   65  cat playbook/playbook.yml 
+   66  cd playbook/
+   67  vim playbook1.yml 
+   68  ansible-playbook playbook/playbook1.yml -i inventory.txt
+   69  cd ..
+   70  ansible-playbook playbook/playbook1.yml -i inventory.txt\
+   71  ansible-playbook playbook/playbook1.yml -i inventory.txt
+   72  vim inventory.txt 
+   73  vim playbook/playbook1.yml 
+   74  vim inventory.txt 
+   75  ansible-playbook playbook/playbook1.yml -i inventory.txt
+   76  mv playbook/playbook playbook/playbook0
+   77  mv playbook/playbook.yml playbook/playbook0.yml
+   78  ls playbook/
+   79  rm playbook/inventory.txt 
+   80  ls playbook/
+   81  vim playbook/playbook0
+   82  ls playbook/
+   83  rm playbook/playbook0
+   84  ls playbook/
+   85  vim playbook/playbook0.yml 
+   86  vim playbook/playbook2.yml 
+   87  ansible-playbook playbook/playbook2.yml -i inventory.txt
+   88  vim playbook/playbook3.yml 
+   89  ansible-playbook playbook/playbook3.yml -i inventory.txt
+   90  vim playbook/playbook3.yml 
+   91  ansible-playbook playbook/playbook3.yml -i inventory.txt
+   92  ls
+   93  mkdir module
+   94  cd module
+   95  ls
+   96  vim copy.yml
+   97  cd >>
+   98  cd ..
+   99  ls
+  100  touch test.yml
+  101  cd module
+  102  vim copy.yml
+  103  cd ..
+  104  ansible-playbook copy.yml
+  105  ansible-playbook module/copy.yml
+  106  vim module/copy.yml
+  107  ansible-playbook module/copy.yml
+  108  vim module/copy.yml
+  109  ansible-playbook module/copy.yml
+  110  ansible-playbook module/copy.yml -i inventory.txt 
+  111  vim module/copy.yml
+  112  ansible-playbook module/copy.yml -i inventory.txt 
+  113  ls
+  114  ansible-playbook module/copy.yml 
+  115  ansible-playbook module/copy.yml -i inventory.txt 
+  116  chmod 777 test.yml 
+  117  ansible-playbook module/copy.yml -i inventory.txt 
+  118  ls
+  119  cd module/
+  120  ls
+  121  touch test.yml
+  122  cd ..
+  123  ansible-playbook module/copy.yml -i inventory.txt 
+  124  rm test.yml 
+  125  vim module/copy.yml
+  126  touch test.yml
+  127  ansible-playbook module/copy.yml -i inventory.txt 
+  128  vim module/copy.yml
+  129  vim module/copy1.yml
+  130  ansible-playbook module/copy1.yml -i inventory.txt 
+  131  vim module/copy1.yml
+  132  ansible-playbook module/copy1.yml -i inventory.txt 
+  133  vim module/copy1.yml
+  134  ansible-playbook module/copy1.yml -i inventory.txt 
+  135  vim module/copy1.yml
+  136  mv test.yml test1.yml 
+  137  ansible-playbook module/copy1.yml -i inventory.txt 
+  138  ls
+  139  mv test.yml test1.yml 
+  140  vim module/copy1.yml
+  141  ansible-playbook module/copy1.yml -i inventory.txt 
+  142  vim module/copy1.yml
+  143  ansible-playbook module/copy1.yml -i inventory.txt 
+  144  vim module/lineinfile.yml
+  145  ansible-playbook module/copy1.yml -i inventory.txt 
+  146  vim module/lineinfile.yml
+  147  ansible-playbook module/copy1.yml -i inventory.txt 
+  148  ansible-playbook module/lineoffile.yml -i inventory.txt 
+  149  ansible-playbook module/lineinfile.yml -i inventory.txt 
+  150  vim module/lineinfile.yml
+  151  ansible-playbook module/lineinfile.yml -i inventory.txt 
+  152  cd module/
+  153  ls
+  154  rm test.yml 
+  155  mkdir copy
+  156  mv copy.yml copy1.yml copy
+  157  ls
+  158  mkdir lineinfile && mv lineinfile.yml lineinfile/
+  159  ls
+  160  cd lineinfile
+  161  ls
+  162  cd ..
+  163  mkdir scripts
+  164  cd ..
+  165  vim module/scripts/script0.yml
+  166  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  167  vim module/scripts/script0.yml
+  168  cd module/scripts/
+  169  ls
+  170  mv script0.yml testscript.sh
+  171  cat testscript.sh 
+  172  vim script0.yml
+  173  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  174  ls
+  175  cd ..
+  176  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  177  cd scripts/
+  178  ls
+  179  cd ..
+  180  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  181  pind 10.0.2.5
+  182  ping 10.0.2.5
+  183  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  184  cd module/scripts/
+  185  vim script0.yml 
+  186  cd ..
+  187  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  188  cd module/scripts/
+  189  vim script0.yml 
+  190  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  191  cd ..
+  192  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  193  cd module/
+  194  ls
+  195  cd scripts/
+  196  ls
+  197  vim testscript.sh 
+  198  ifconfig
+  199  vim testscript.sh 
+  200  cd ..
+  201  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  202  cd module/
+  203  cd scripts/
+  204  vims
+  205  vim script0.yml 
+  206  ansible-playbook script0.yml -i inventory.txt 
+  207  cd ..
+  208  ansible-playbook scripts/script0.yml -i inventory.txt 
+  209  cd ..
+  210  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  211  cd module/
+  212  cd scripts/
+  213  vim testscript.sh 
+  214  cd ..
+  215  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  216  cd module/
+  217  ls
+  218  mkdir service
+  219  cd service/
+  220  vim service1.yml
+  221  ping 10.0.2.5
+  222  vim service1.yml
+  223  cd ..
+  224  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  225  ansible-playbook module/service/service1.yml -i inventory.txt 
+  226  vim module/service/service1.yml
+  227  ansible-playbook module/service/service1.yml -i inventory.txt 
+  228  vim module/service/service1.yml
+  229  ansible-playbook module/service/service1.yml -i inventory.txt 
+  230  vim module/service/service1.yml
+  231  ansible-playbook module/service/service1.yml -i inventory.txt 
+  232  vim module/service/service1.yml
+  233  ansible-playbook module/service/service1.yml -i inventory.txt 
+  234  ansible webserver -m ping -i inventory.txt 
+  235  ansible webserver0 -m ping -i inventory.txt 
+  236  ansible webserver1 -m ping -i inventory.txt 
+  237  ansible webserver2 -m ping -i inventory.txt 
+  238  ansible webserver0 -m ping -i inventory.txt 
+  239  vim module/service/service1.yml
+  240  ansible-playbook module/service/service1.yml -i inventory.txt 
+  241  vim module/service/service1.yml
+  242  ansible-playbook module/service/service1.yml -i inventory.txt 
+  243  ls
+  244  vim inventory.txt 
+  245  ansible-playbook module/service/service1.yml -i inventory.txt 
+  246  ansible webserver0 -m ping -i inventory.txt 
+  247  vim inventory.txt 
+  248  ansible webserver0 -m ping -i inventory.txt 
+  249  vim inventory.txt 
+  250  ansible webserver0 -m ping -i inventory.txt 
+  251  ansible all -m ping -i inventory.txt 
+  252  vim module/service/service1.yml
+  253  ansible all -m ping -i inventory.txt 
+  254  ansible-playbook module/service/service1.yml -i inventory.txt 
+  255  vim module/service/service1.yml
+  256  ansible-playbook module/service/service1.yml -i inventory.txt 
+  257  vim module/service/service1.yml
+  258  ansible-playbook module/service/service1.yml -i inventory.txt 
+  259  ansible-playbook module/service/service1.yml -i inventory.txt -u afzal --ask-pass -K
+  260  vim module/service/service1.yml
+  261  cd module/
+  262  mkdir user
+  263  cd user/
+  264  vim user0.yml
+  265  cd ..
+  266  ansible-playbook module/user/user0.yml -i inventory.txt 
+  267  vim module/user/user0.yml
+  268  ansible-playbook module/user/user0.yml -i inventory.txt 
+  269  ansible-playbook module/user/user0.yml -i inventory.txt -u afzal --ask-pass -K
+  270  vim module/user/user0.yml
+  271  ansible-playbook module/user/user0.yml -i inventory.txt -u afzal --ask-pass -K
+  272  vim module/user/user0.yml
+  273  ansible-playbook module/user/user0.yml -i inventory.txt -u afzal --ask-pass -K
+  274  vim module/service/service1.yml
+  275  vim module/user/user0.yml
+  276  vim module/user/user1.yml
+  277  vim module/user/user0.yml
+  278  vim module/user/user1.yml
+  279  ansible-playbook module/user/user1.yml -i inventory.txt -u afzal --ask-pass -K
+  280  ansible-playbook module/user/user0.yml -i inventory.txt -u afzal --ask-pass -K
+  281  vim module/user/user1.yml
+  282  ansible-playbook module/user/user1.yml -i inventory.txt -u afzal --ask-pass -K
+  283  ansible webserver0 -m ping -i inventory.txt 
+  284  vim inventory.txt 
+  285  ansible webserver0 -m ping -i inventory.txt 
+  286  histroy
+  287  history
+  288  touch allcommands.txt
+  289  history >> allcommands.txt 
+  290  cat allcommands.txt 
+  291  git init
+  292  apt install git 
+  293  git init -b main
+  294  git init main
+  295  git add allcommands.txt 
+  296  git symbolic-ref HEAD refs/heads/main
+  297  git init && git symbolic-ref HEAD refs/heads/main
+  298  git add allcommands.txt 
+  299  git commit
+  300  git commit -m "all commands file"
+  301  git remote add origin https://github.com/Afzal-exe/random.git
+  302  git remote -v
+  303  git push origin main
+  304  cat ~/.ssh/id_rsa.pub
+  305  ssh-keygen -t rsa -f ~/.ssh/id_rsa
+  306  git fetch origin
+  307  git push --set-upstream origin/master
+  308  git push --set-upstream origin
+  309  git push --set-upstream origin main
+  310  cat ~/.ssh/id_rsa.pub
+  311  git push --set-upstream origin main
+  312  pwd
+  313  apt -i /etc/ansible
+  314  apt -i /home/afzal/Downloads
+  315  apt install /home/afzal/Downloads
+  316  apt install /home/afzal/Downloads/git-credential-manager 
+  317  apt -i /home/afzal/Downloads/git-credential-manager 
+  318  apt -i /home/afzal/Downloads/gcm-linux_amd64.2.1.2-symbols.tar.gz 
+  319  apt install /home/afzal/Downloads/gcm-linux_amd64.2.1.2-symbols.tar.gz 
+  320  cat ~/.ssh/id_rsa.pub
+  321  ssh-keygen -t rsa -f ~/.ssh/id_rsa
+  322  cat ~/.ssh/id_rsa.pub
+  323  git remote add origin git@github.com:Afzal-exe/random.git
+  324  git remote remove origin
+  325  git remote add origin git@github.com:Afzal-exe/random.git
+  326  git push origin main
+  327  git push --hepl
+  328  git add .
+  329  git status
+  330  git add 
+  331  git status
+  332  git add .
+  333  git commit -m "bla"
+  334  git add allcommands.txt 
+  335  git commit -m "bla"
+  336  git add .
+  337  git add test1.yml 
+  338  git commit -m "bla"
+  339  git pull README.md
+  340  git clone git@github.com:Afzal-exe/random.git
+  341  ls
+  342  ll
+  343  vim 1
+  344  git remote add origin git@github.com:Afzal-exe/random.git
+  345  git push origin main
+  346  git status
+  347  git pull --rebase
+  348  git push origin main
+  349  git push -f origin main
+  350  history >> allcommands.txt 
+  351  git add allcommands.txt 
+  352  git commit -m "YOUR COMMENT"
+  353  git remote add origin git@github.com:Afzal-exe/random.git
+  354  git push -f origin main
+  355  history >> allcommands.txt 
+    1  apt update
+    2  apt update -y
+    3  systemctl status apache2
+    4  systemctl start apache2
+    5  systemctl start httpd
+    6  apt upgrade
+    7  systemctl start apache2
+    8  systemctl start httpd
+    9  systemctl status apache2
+   10  systemctl start apache2
+   11  service apache2 start
+   12  apt update
+   13  service ssh start
+   14  apt install apache2
+   15  apt install ssh
+   16  systemctl status apache2
+   17  init 0
+   18  systemctl status apache2
+   19  init 0
+   20  apt install ansible
+   21  usermod -aG sudo afzal
+   22  ansible --version
+   23  init 0
+   24  ansible webserver -m ping -i inventory.txt 
+   25  cat inventory.txt 
+   26  vim inventory.txt 
+   27  ansible webserver -m ping -i inventory.txt 
+   28  vim inventory.txt 
+   29  ansible webserver -m ping -i inventory.txt 
+   30  vim inventory.txt 
+   31  ansible webserver -m ping -i inventory.txt 
+   32  vim inventory.txt 
+   33  ansible webserver2 -m ping -i inventory.txt 
+   34  ansible -m ping -i inventory.txt 
+   35  ansible all -m ping -i inventory.txt 
+   36  ansible webserver* -m ping -i inventory.txt 
+   37  vim inventory.txt 
+   38  ansible server -m ping -i inventory.txt 
+   39  vim inventory.txt 
+   40  ansible servers -m ping -i inventory.txt 
+   41  ping 10.0.2.5
+   42  ping 10.0.2.6
+   43  vim inventory.txt 
+   44  ansible servers -m ping -i inventory.txt 
+   45  ls
+   46  vim inventory.txt 
+   47  ansible web_database_servers -m ping -i inventory.txt 
+   48  vim inventory.txt 
+   49  ansible web_database_servers -m ping -i inventory.txt
+   50  vim inventory.txt 
+   51  ansible web_database_server -m ping -i inventory.txt
+   52  mkdir playbook
+   53  cd playbook/
+   54  vim playbook.yml
+   55  cat playbook.yml 
+   56  pwd
+   57  ansible-playbook playbook.yml -i inventory.txt
+   58  cat playbook.yml 
+   59  ansible-playbook playbook.yml -i inventory.txt
+   60  vim inventory.txt 
+   61  cd ..
+   62  vim inventory.txt 
+   63  ansible-playbook playbook.yml -i inventory.txt
+   64  ansible-playbook playbook/playbook.yml -i inventory.txt
+   65  cat playbook/playbook.yml 
+   66  cd playbook/
+   67  vim playbook1.yml 
+   68  ansible-playbook playbook/playbook1.yml -i inventory.txt
+   69  cd ..
+   70  ansible-playbook playbook/playbook1.yml -i inventory.txt\
+   71  ansible-playbook playbook/playbook1.yml -i inventory.txt
+   72  vim inventory.txt 
+   73  vim playbook/playbook1.yml 
+   74  vim inventory.txt 
+   75  ansible-playbook playbook/playbook1.yml -i inventory.txt
+   76  mv playbook/playbook playbook/playbook0
+   77  mv playbook/playbook.yml playbook/playbook0.yml
+   78  ls playbook/
+   79  rm playbook/inventory.txt 
+   80  ls playbook/
+   81  vim playbook/playbook0
+   82  ls playbook/
+   83  rm playbook/playbook0
+   84  ls playbook/
+   85  vim playbook/playbook0.yml 
+   86  vim playbook/playbook2.yml 
+   87  ansible-playbook playbook/playbook2.yml -i inventory.txt
+   88  vim playbook/playbook3.yml 
+   89  ansible-playbook playbook/playbook3.yml -i inventory.txt
+   90  vim playbook/playbook3.yml 
+   91  ansible-playbook playbook/playbook3.yml -i inventory.txt
+   92  ls
+   93  mkdir module
+   94  cd module
+   95  ls
+   96  vim copy.yml
+   97  cd >>
+   98  cd ..
+   99  ls
+  100  touch test.yml
+  101  cd module
+  102  vim copy.yml
+  103  cd ..
+  104  ansible-playbook copy.yml
+  105  ansible-playbook module/copy.yml
+  106  vim module/copy.yml
+  107  ansible-playbook module/copy.yml
+  108  vim module/copy.yml
+  109  ansible-playbook module/copy.yml
+  110  ansible-playbook module/copy.yml -i inventory.txt 
+  111  vim module/copy.yml
+  112  ansible-playbook module/copy.yml -i inventory.txt 
+  113  ls
+  114  ansible-playbook module/copy.yml 
+  115  ansible-playbook module/copy.yml -i inventory.txt 
+  116  chmod 777 test.yml 
+  117  ansible-playbook module/copy.yml -i inventory.txt 
+  118  ls
+  119  cd module/
+  120  ls
+  121  touch test.yml
+  122  cd ..
+  123  ansible-playbook module/copy.yml -i inventory.txt 
+  124  rm test.yml 
+  125  vim module/copy.yml
+  126  touch test.yml
+  127  ansible-playbook module/copy.yml -i inventory.txt 
+  128  vim module/copy.yml
+  129  vim module/copy1.yml
+  130  ansible-playbook module/copy1.yml -i inventory.txt 
+  131  vim module/copy1.yml
+  132  ansible-playbook module/copy1.yml -i inventory.txt 
+  133  vim module/copy1.yml
+  134  ansible-playbook module/copy1.yml -i inventory.txt 
+  135  vim module/copy1.yml
+  136  mv test.yml test1.yml 
+  137  ansible-playbook module/copy1.yml -i inventory.txt 
+  138  ls
+  139  mv test.yml test1.yml 
+  140  vim module/copy1.yml
+  141  ansible-playbook module/copy1.yml -i inventory.txt 
+  142  vim module/copy1.yml
+  143  ansible-playbook module/copy1.yml -i inventory.txt 
+  144  vim module/lineinfile.yml
+  145  ansible-playbook module/copy1.yml -i inventory.txt 
+  146  vim module/lineinfile.yml
+  147  ansible-playbook module/copy1.yml -i inventory.txt 
+  148  ansible-playbook module/lineoffile.yml -i inventory.txt 
+  149  ansible-playbook module/lineinfile.yml -i inventory.txt 
+  150  vim module/lineinfile.yml
+  151  ansible-playbook module/lineinfile.yml -i inventory.txt 
+  152  cd module/
+  153  ls
+  154  rm test.yml 
+  155  mkdir copy
+  156  mv copy.yml copy1.yml copy
+  157  ls
+  158  mkdir lineinfile && mv lineinfile.yml lineinfile/
+  159  ls
+  160  cd lineinfile
+  161  ls
+  162  cd ..
+  163  mkdir scripts
+  164  cd ..
+  165  vim module/scripts/script0.yml
+  166  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  167  vim module/scripts/script0.yml
+  168  cd module/scripts/
+  169  ls
+  170  mv script0.yml testscript.sh
+  171  cat testscript.sh 
+  172  vim script0.yml
+  173  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  174  ls
+  175  cd ..
+  176  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  177  cd scripts/
+  178  ls
+  179  cd ..
+  180  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  181  pind 10.0.2.5
+  182  ping 10.0.2.5
+  183  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  184  cd module/scripts/
+  185  vim script0.yml 
+  186  cd ..
+  187  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  188  cd module/scripts/
+  189  vim script0.yml 
+  190  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  191  cd ..
+  192  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  193  cd module/
+  194  ls
+  195  cd scripts/
+  196  ls
+  197  vim testscript.sh 
+  198  ifconfig
+  199  vim testscript.sh 
+  200  cd ..
+  201  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  202  cd module/
+  203  cd scripts/
+  204  vims
+  205  vim script0.yml 
+  206  ansible-playbook script0.yml -i inventory.txt 
+  207  cd ..
+  208  ansible-playbook scripts/script0.yml -i inventory.txt 
+  209  cd ..
+  210  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  211  cd module/
+  212  cd scripts/
+  213  vim testscript.sh 
+  214  cd ..
+  215  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  216  cd module/
+  217  ls
+  218  mkdir service
+  219  cd service/
+  220  vim service1.yml
+  221  ping 10.0.2.5
+  222  vim service1.yml
+  223  cd ..
+  224  ansible-playbook module/scripts/script0.yml -i inventory.txt 
+  225  ansible-playbook module/service/service1.yml -i inventory.txt 
+  226  vim module/service/service1.yml
+  227  ansible-playbook module/service/service1.yml -i inventory.txt 
+  228  vim module/service/service1.yml
+  229  ansible-playbook module/service/service1.yml -i inventory.txt 
+  230  vim module/service/service1.yml
+  231  ansible-playbook module/service/service1.yml -i inventory.txt 
+  232  vim module/service/service1.yml
+  233  ansible-playbook module/service/service1.yml -i inventory.txt 
+  234  ansible webserver -m ping -i inventory.txt 
+  235  ansible webserver0 -m ping -i inventory.txt 
+  236  ansible webserver1 -m ping -i inventory.txt 
+  237  ansible webserver2 -m ping -i inventory.txt 
+  238  ansible webserver0 -m ping -i inventory.txt 
+  239  vim module/service/service1.yml
+  240  ansible-playbook module/service/service1.yml -i inventory.txt 
+  241  vim module/service/service1.yml
+  242  ansible-playbook module/service/service1.yml -i inventory.txt 
+  243  ls
+  244  vim inventory.txt 
+  245  ansible-playbook module/service/service1.yml -i inventory.txt 
+  246  ansible webserver0 -m ping -i inventory.txt 
+  247  vim inventory.txt 
+  248  ansible webserver0 -m ping -i inventory.txt 
+  249  vim inventory.txt 
+  250  ansible webserver0 -m ping -i inventory.txt 
+  251  ansible all -m ping -i inventory.txt 
+  252  vim module/service/service1.yml
+  253  ansible all -m ping -i inventory.txt 
+  254  ansible-playbook module/service/service1.yml -i inventory.txt 
+  255  vim module/service/service1.yml
+  256  ansible-playbook module/service/service1.yml -i inventory.txt 
+  257  vim module/service/service1.yml
+  258  ansible-playbook module/service/service1.yml -i inventory.txt 
+  259  ansible-playbook module/service/service1.yml -i inventory.txt -u afzal --ask-pass -K
+  260  vim module/service/service1.yml
+  261  cd module/
+  262  mkdir user
+  263  cd user/
+  264  vim user0.yml
+  265  cd ..
+  266  ansible-playbook module/user/user0.yml -i inventory.txt 
+  267  vim module/user/user0.yml
+  268  ansible-playbook module/user/user0.yml -i inventory.txt 
+  269  ansible-playbook module/user/user0.yml -i inventory.txt -u afzal --ask-pass -K
+  270  vim module/user/user0.yml
+  271  ansible-playbook module/user/user0.yml -i inventory.txt -u afzal --ask-pass -K
+  272  vim module/user/user0.yml
+  273  ansible-playbook module/user/user0.yml -i inventory.txt -u afzal --ask-pass -K
+  274  vim module/service/service1.yml
+  275  vim module/user/user0.yml
+  276  vim module/user/user1.yml
+  277  vim module/user/user0.yml
+  278  vim module/user/user1.yml
+  279  ansible-playbook module/user/user1.yml -i inventory.txt -u afzal --ask-pass -K
+  280  ansible-playbook module/user/user0.yml -i inventory.txt -u afzal --ask-pass -K
+  281  vim module/user/user1.yml
+  282  ansible-playbook module/user/user1.yml -i inventory.txt -u afzal --ask-pass -K
+  283  ansible webserver0 -m ping -i inventory.txt 
+  284  vim inventory.txt 
+  285  ansible webserver0 -m ping -i inventory.txt 
+  286  histroy
+  287  history
+  288  touch allcommands.txt
+  289  history >> allcommands.txt 
+  290  cat allcommands.txt 
+  291  git init
+  292  apt install git 
+  293  git init -b main
+  294  git init main
+  295  git add allcommands.txt 
+  296  git symbolic-ref HEAD refs/heads/main
+  297  git init && git symbolic-ref HEAD refs/heads/main
+  298  git add allcommands.txt 
+  299  git commit
+  300  git commit -m "all commands file"
+  301  git remote add origin https://github.com/Afzal-exe/random.git
+  302  git remote -v
+  303  git push origin main
+  304  cat ~/.ssh/id_rsa.pub
+  305  ssh-keygen -t rsa -f ~/.ssh/id_rsa
+  306  git fetch origin
+  307  git push --set-upstream origin/master
+  308  git push --set-upstream origin
+  309  git push --set-upstream origin main
+  310  cat ~/.ssh/id_rsa.pub
+  311  git push --set-upstream origin main
+  312  pwd
+  313  apt -i /etc/ansible
+  314  apt -i /home/afzal/Downloads
+  315  apt install /home/afzal/Downloads
+  316  apt install /home/afzal/Downloads/git-credential-manager 
+  317  apt -i /home/afzal/Downloads/git-credential-manager 
+  318  apt -i /home/afzal/Downloads/gcm-linux_amd64.2.1.2-symbols.tar.gz 
+  319  apt install /home/afzal/Downloads/gcm-linux_amd64.2.1.2-symbols.tar.gz 
+  320  cat ~/.ssh/id_rsa.pub
+  321  ssh-keygen -t rsa -f ~/.ssh/id_rsa
+  322  cat ~/.ssh/id_rsa.pub
+  323  git remote add origin git@github.com:Afzal-exe/random.git
+  324  git remote remove origin
+  325  git remote add origin git@github.com:Afzal-exe/random.git
+  326  git push origin main
+  327  git push --hepl
+  328  git add .
+  329  git status
+  330  git add 
+  331  git status
+  332  git add .
+  333  git commit -m "bla"
+  334  git add allcommands.txt 
+  335  git commit -m "bla"
+  336  git add .
+  337  git add test1.yml 
+  338  git commit -m "bla"
+  339  git pull README.md
+  340  git clone git@github.com:Afzal-exe/random.git
+  341  ls
+  342  ll
+  343  vim 1
+  344  git remote add origin git@github.com:Afzal-exe/random.git
+  345  git push origin main
+  346  git status
+  347  git pull --rebase
+  348  git push origin main
+  349  git push -f origin main
+  350  history >> allcommands.txt 
+  351  git add allcommands.txt 
+  352  git commit -m "YOUR COMMENT"
+  353  git remote add origin git@github.com:Afzal-exe/random.git
+  354  git push -f origin main
+  355  history >> allcommands.txt 
+  356  git commit -m "YOUR COMMENT"
+  357  git remote add origin git@github.com:Afzal-exe/random.git
+  358  git push -f origin main
+  359  history >> allcommands.txt 
