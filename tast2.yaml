@@ -1,36 +1,15 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: |
   first template to create ec2 intstance 
-Parameters:
-  username:
-    Type: String
-    Default: test
-
-  password:
-    Type: String
-    Default: 123456789
-
-
 Resources:
   testcftec2:
     Type: 'AWS::EC2::Instance'
     Properties:
       ImageId: ami-09298640a92b2d12c
       InstanceType: t2.micro
-      KeyName: test
+      KeyName: !Ref ec2keypair
       SecurityGroups: 
         - Ref: SSHSecurityGroup
-
-      UserData: 
-        Fn::Base64: !Sub |
-          #! /bin/bash -xe
-          sed -i "s/PasswordAuthentication no/PasswordAuthentication yes/g" /etc/ssh/sshd_config
-          useradd  "${username}"
-          echo -e "${password}\n${password}" | passwd "${username}"
-          systemctl restart sshd
-          - password: !Ref password
-            username: !Ref username
-        
 
   SSHSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
@@ -42,6 +21,10 @@ Resources:
           ToPort: 22
           CidrIp: 0.0.0.0/0
 
+  ec2keypair:
+    Type: 'AWS::EC2::KeyPair'
+    Properties:
+      KeyName: cfttest123
 
 
 
