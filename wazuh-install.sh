@@ -1,5 +1,8 @@
 #!/bin/bash
 
+apt-get update
+
+
 # Wazuh installer
 # Copyright (C) 2015, Wazuh Inc.
 #
