@@ -1,0 +1,34 @@
+name: Upload Changed Files to Azure Blob Storage
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'Intro-S3/**'  # Replace with the folder or files you care about
+
+jobs:
+  sync-to-azure:
+    runs-on: ubuntu-latest
+    environment:
+      name: 'SECRET'
+
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Login to Azure using service principal
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.SECRET}}
+
+
+      - name: Upload files to Azure Blob Storage
+        run: |
+          az storage blob upload-batch \
+            --account-name stractfortempandscript \
+            --destination script \
+            --source Intro-S3\
+            --overwrite \
+            --sas-token 'sv=2024-11-04&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2025-04-25T20:32:43Z&st=2025-04-25T12:32:43Z&spr=https&sig=lEUwKiw6xeTgd4NCgIqKHguAasVW1qOMmCU3B4Did3k%3D'
