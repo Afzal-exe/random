@@ -17,6 +17,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Login to Azure using service principal
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Set environment variable for SAS token
         run: echo "SAS_TOKEN=${{ secrets.SECRET }}" >> $GITHUB_ENV
 
