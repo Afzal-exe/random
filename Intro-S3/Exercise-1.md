@@ -1,4 +1,4 @@
-#HAHA
+#HAHAHA
 ## Introduction to Cloud Object Storage - Amazon S3 
 #### Lab Duration: 1 Hour 
 #### Overview
